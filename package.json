@@ -1,6 +1,19 @@
 {
-  "author": "Tom Carden <tom@bloom.io> (http://bloom.io)",
-  "name": "require-env",
+  "author": {
+    "name": "Edward Ruchevits",
+    "email": "ruchevits@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Edward Ruchevits",
+      "email": "ruchevits@gmail.com"
+    },
+    {
+      "name": "Tom Carden",
+      "email": "tom@bloom.io"
+    }
+  ],
+  "name": "require-env-optional",
   "description": "Crash first process.env utils.",
   "version": "0.2.1",
   "homepage": "https://github.com/bloomtime/require-env",
