@@ -25,8 +25,9 @@ module.exports = {
             console.warn(filename + " is absent; your environment may be incomplete.");
         }
     },
-    require: function(name) {
+    require: function(name, defaultValue) {
         if (!this.contains(name)) {
+            if (defaultValue) return defaultValue;
             throw new Error("process.env." + name + " is undefined");
         }
 

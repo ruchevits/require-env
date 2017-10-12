@@ -5,5 +5,5 @@ import * as NodeUrl from 'url';
 
 export function contains(name: string): boolean;
 export function inherit(filename: string): void;
-export function require(name: string): string;
+export function require(name: string, defaultValue: string): string;
 export function requireUrl(name: string): NodeUrl.Url;
