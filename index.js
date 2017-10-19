@@ -27,7 +27,7 @@ module.exports = {
     },
     require: function(name, defaultValue) {
         if (!this.contains(name)) {
-            if (defaultValue) return defaultValue;
+            if (defaultValue !== undefined) return defaultValue;
             throw new Error("process.env." + name + " is undefined");
         }
 
