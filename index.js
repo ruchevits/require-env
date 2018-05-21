@@ -15,10 +15,15 @@ module.exports = {
                 var parts = line.split("=");
 
                 // override environment vars with test.env
-                if (parts.length == 2 &&
-                    !parts[0].match(/^#/) &&
-                    process.env[parts[0]] === undefined) {
-                    process.env[parts[0]] = parts[1];
+                if (parts.length > 1) {
+
+                  // only treat first = as the delimiter
+                  parts = [ parts.shift(), parts.join('=') ];
+
+                  if (!parts[0].match(/^#/) &&
+                      process.env[parts[0]] === undefined) {
+                      process.env[parts[0]] = parts[1];
+                  }
                 }
             });
         } catch (e) {
